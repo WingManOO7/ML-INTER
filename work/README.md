@@ -43,8 +43,8 @@ in Colab, straight from your repo):
 
 | Notebook | Assignment | Open | Status |
 |---|---|---|---|
-| `notebooks/w01_research_question.ipynb` | ML-02 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/WingManOO7/ML-INTER/blob/main/work/notebooks/w01_research_question.ipynb?flush_cache=true) | ☐ |
-| `notebooks/w02_ml_task_framing.ipynb` | ML-03 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/WingManOO7/ML-INTER/blob/main/work/notebooks/w02_ml_task_framing.ipynb?flush_cache=true) | ☐ |
+| `notebooks/w01_research_question.ipynb` | ML-02 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/WingManOO7/ML-INTER/blob/main/work/notebooks/w01_research_question.ipynb?flush_cache=true) | ☑ |
+| `notebooks/w02_ml_task_framing.ipynb` | ML-03 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/WingManOO7/ML-INTER/blob/main/work/notebooks/w02_ml_task_framing.ipynb?flush_cache=true) | ☑ |
 | `notebooks/w03_data_contract.ipynb` | ML-04 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/WingManOO7/ML-INTER/blob/main/work/notebooks/w03_data_contract.ipynb?flush_cache=true) | ☐ |
 | `notebooks/w03_feature_leakage_check.ipynb` | ML-05 — optional stretch (card retired 2026-07-13; its core lives in ML-04 now) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/WingManOO7/ML-INTER/blob/main/work/notebooks/w03_feature_leakage_check.ipynb?flush_cache=true) | optional |
 | `notebooks/w04_signal_audit.ipynb` | ML-06 — optional stretch (card retired 2026-07-13; its core lives in ML-07 now) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/WingManOO7/ML-INTER/blob/main/work/notebooks/w04_signal_audit.ipynb?flush_cache=true) | optional |
