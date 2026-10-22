@@ -1,0 +1,366 @@
+{
+  "notebook": "work/notebooks/w05_model.ipynb",
+  "release": "FlyRank/internship-warehouse v20260703",
+  "frames": {
+    "main_T": "2026-03-16",
+    "time_forward_T": "2026-04-13"
+  },
+  "split": "GroupShuffleSplit(test_size=0.3, random_state=42) on client_hash_id (= ML-04/ML-07 split)",
+  "selection": {
+    "rule": "simplest learned model within 1 std of best grouped-CV AP",
+    "best": "random_forest+3",
+    "chosen": "logistic_regression"
+  },
+  "features": [
+    "log_imp_pre",
+    "pos_pre",
+    "active_days_pre",
+    "momentum_pre",
+    "age_days_at_T"
+  ],
+  "seed": 42,
+  "cv_inside_train": {
+    "ML-07 rule (baseline)": {
+      "P@50 mean": 0.368,
+      "P@50 std": 0.127,
+      "P@500 mean": 0.402,
+      "P@500 std": 0.206,
+      "AP mean": 0.382,
+      "AP std": 0.151,
+      "ROC-AUC mean": 0.584,
+      "ROC-AUC std": 0.074
+    },
+    "slide sort (no training)": {
+      "P@50 mean": 0.892,
+      "P@50 std": 0.088,
+      "P@500 mean": 0.584,
+      "P@500 std": 0.253,
+      "AP mean": 0.475,
+      "AP std": 0.166,
+      "ROC-AUC mean": 0.649,
+      "ROC-AUC std": 0.082
+    },
+    "logistic_regression": {
+      "P@50 mean": 0.892,
+      "P@50 std": 0.074,
+      "P@500 mean": 0.615,
+      "P@500 std": 0.192,
+      "AP mean": 0.486,
+      "AP std": 0.156,
+      "ROC-AUC mean": 0.66,
+      "ROC-AUC std": 0.072
+    },
+    "decision_tree_d3": {
+      "P@50 mean": 0.772,
+      "P@50 std": 0.073,
+      "P@500 mean": 0.62,
+      "P@500 std": 0.164,
+      "AP mean": 0.427,
+      "AP std": 0.125,
+      "ROC-AUC mean": 0.626,
+      "ROC-AUC std": 0.061
+    },
+    "random_forest": {
+      "P@50 mean": 0.86,
+      "P@50 std": 0.058,
+      "P@500 mean": 0.582,
+      "P@500 std": 0.24,
+      "AP mean": 0.476,
+      "AP std": 0.161,
+      "ROC-AUC mean": 0.647,
+      "ROC-AUC std": 0.084
+    },
+    "gradient_boosting": {
+      "P@50 mean": 0.836,
+      "P@50 std": 0.108,
+      "P@500 mean": 0.572,
+      "P@500 std": 0.222,
+      "AP mean": 0.461,
+      "AP std": 0.159,
+      "ROC-AUC mean": 0.631,
+      "ROC-AUC std": 0.082
+    },
+    "logistic_regression+3": {
+      "P@50 mean": 0.896,
+      "P@50 std": 0.082,
+      "P@500 mean": 0.608,
+      "P@500 std": 0.218,
+      "AP mean": 0.485,
+      "AP std": 0.16,
+      "ROC-AUC mean": 0.663,
+      "ROC-AUC std": 0.082
+    },
+    "random_forest+3": {
+      "P@50 mean": 0.86,
+      "P@50 std": 0.093,
+      "P@500 mean": 0.619,
+      "P@500 std": 0.206,
+      "AP mean": 0.489,
+      "AP std": 0.158,
+      "ROC-AUC mean": 0.661,
+      "ROC-AUC std": 0.094
+    }
+  },
+  "holdout": {
+    "ML-07 rule (baseline)": {
+      "P@10": 0.8,
+      "P@20": 0.65,
+      "P@50": 0.6,
+      "P@100": 0.57,
+      "P@500": 0.56,
+      "AP": 0.515,
+      "ROC-AUC": 0.677
+    },
+    "slide sort (no training)": {
+      "P@10": 1.0,
+      "P@20": 1.0,
+      "P@50": 0.98,
+      "P@100": 0.96,
+      "P@500": 0.864,
+      "AP": 0.587,
+      "ROC-AUC": 0.706
+    },
+    "logistic_regression": {
+      "P@10": 1.0,
+      "P@20": 1.0,
+      "P@50": 0.96,
+      "P@100": 0.96,
+      "P@500": 0.884,
+      "AP": 0.591,
+      "ROC-AUC": 0.711
+    },
+    "decision_tree_d3": {
+      "P@10": 0.9,
+      "P@20": 0.85,
+      "P@50": 0.88,
+      "P@100": 0.89,
+      "P@500": 0.67,
+      "AP": 0.505,
+      "ROC-AUC": 0.648
+    },
+    "random_forest": {
+      "P@10": 1.0,
+      "P@20": 1.0,
+      "P@50": 0.92,
+      "P@100": 0.91,
+      "P@500": 0.878,
+      "AP": 0.612,
+      "ROC-AUC": 0.72
+    },
+    "gradient_boosting": {
+      "P@10": 1.0,
+      "P@20": 1.0,
+      "P@50": 0.96,
+      "P@100": 0.95,
+      "P@500": 0.86,
+      "AP": 0.582,
+      "ROC-AUC": 0.694
+    },
+    "logistic_regression+3": {
+      "P@10": 1.0,
+      "P@20": 1.0,
+      "P@50": 0.98,
+      "P@100": 0.93,
+      "P@500": 0.868,
+      "AP": 0.588,
+      "ROC-AUC": 0.721
+    },
+    "random_forest+3": {
+      "P@10": 1.0,
+      "P@20": 0.95,
+      "P@50": 0.94,
+      "P@100": 0.94,
+      "P@500": 0.874,
+      "AP": 0.602,
+      "ROC-AUC": 0.726
+    },
+    "base rate (random order)": {
+      "P@10": 0.361,
+      "P@20": 0.361,
+      "P@50": 0.361,
+      "P@100": 0.361,
+      "P@500": 0.361,
+      "AP": 0.361,
+      "ROC-AUC": 0.5
+    }
+  },
+  "time_forward_april": {
+    "ML-07 rule (baseline)": {
+      "P@10": 1.0,
+      "P@20": 1.0,
+      "P@50": 0.76,
+      "P@100": 0.6,
+      "P@500": 0.464,
+      "AP": 0.461,
+      "ROC-AUC": 0.534
+    },
+    "slide sort (no training)": {
+      "P@10": 1.0,
+      "P@20": 1.0,
+      "P@50": 0.98,
+      "P@100": 0.96,
+      "P@500": 0.954,
+      "AP": 0.561,
+      "ROC-AUC": 0.597
+    },
+    "logistic_regression": {
+      "P@10": 1.0,
+      "P@20": 1.0,
+      "P@50": 0.94,
+      "P@100": 0.96,
+      "P@500": 0.93,
+      "AP": 0.526,
+      "ROC-AUC": 0.559
+    },
+    "random_forest": {
+      "P@10": 0.9,
+      "P@20": 0.9,
+      "P@50": 0.92,
+      "P@100": 0.91,
+      "P@500": 0.904,
+      "AP": 0.51,
+      "ROC-AUC": 0.546
+    },
+    "gradient_boosting": {
+      "P@10": 1.0,
+      "P@20": 1.0,
+      "P@50": 0.94,
+      "P@100": 0.93,
+      "P@500": 0.822,
+      "AP": 0.49,
+      "ROC-AUC": 0.532
+    }
+  },
+  "stake_top50": {
+    "March | ML-07 rule (baseline)": {
+      "precision@50": 0.6,
+      "impressions before T": 1185414.0,
+      "impressions actually lost after T": 382930.0,
+      "median impressions per page": 19342.0
+    },
+    "March | logistic_regression": {
+      "precision@50": 0.96,
+      "impressions before T": 18040.0,
+      "impressions actually lost after T": 16416.0,
+      "median impressions per page": 217.0
+    },
+    "March | logistic_regression x impressions (value-aware)": {
+      "precision@50": 0.66,
+      "impressions before T": 2653061.0,
+      "impressions actually lost after T": 810794.0,
+      "median impressions per page": 44315.0
+    },
+    "April | ML-07 rule (baseline)": {
+      "precision@50": 0.76,
+      "impressions before T": 1254199.0,
+      "impressions actually lost after T": 694126.0,
+      "median impressions per page": 21372.0
+    },
+    "April | logistic_regression": {
+      "precision@50": 0.94,
+      "impressions before T": 125762.0,
+      "impressions actually lost after T": 114239.0,
+      "median impressions per page": 393.0
+    },
+    "April | logistic_regression x impressions (value-aware)": {
+      "precision@50": 0.62,
+      "impressions before T": 2787998.0,
+      "impressions actually lost after T": 833645.0,
+      "median impressions per page": 39097.5
+    }
+  },
+  "fell_further_check": {
+    "ML-07 rule (baseline)": {
+      "P@50": 0.14,
+      "P@500": 0.228,
+      "AP": 0.346,
+      "ROC-AUC": 0.539
+    },
+    "slide sort (no training)": {
+      "P@50": 0.38,
+      "P@500": 0.36,
+      "AP": 0.349,
+      "ROC-AUC": 0.513
+    },
+    "logistic_regression (trained on the contract label)": {
+      "P@50": 0.46,
+      "P@500": 0.43,
+      "AP": 0.373,
+      "ROC-AUC": 0.545
+    },
+    "logistic_regression (retrained on fell_further)": {
+      "P@50": 0.2,
+      "P@500": 0.278,
+      "AP": 0.392,
+      "ROC-AUC": 0.595
+    },
+    "random_forest (retrained on fell_further)": {
+      "P@50": 0.84,
+      "P@500": 0.806,
+      "AP": 0.444,
+      "ROC-AUC": 0.579
+    }
+  },
+  "final_table": {
+    "base rate (random order)": {
+      "P@10": 0.3,
+      "P@50": 0.36,
+      "P@500": 0.338,
+      "AP": 0.359,
+      "ROC-AUC": 0.495,
+      "top-50 impr. lost": 10779,
+      "April P@50": 0.48,
+      "April AP": 0.44,
+      "April top-50 impr. lost": 18660
+    },
+    "ML-07 rule (baseline)": {
+      "P@10": 0.8,
+      "P@50": 0.6,
+      "P@500": 0.56,
+      "AP": 0.515,
+      "ROC-AUC": 0.677,
+      "top-50 impr. lost": 382930,
+      "April P@50": 0.76,
+      "April AP": 0.461,
+      "April top-50 impr. lost": 694126
+    },
+    "slide sort (no training)": {
+      "P@10": 1.0,
+      "P@50": 0.98,
+      "P@500": 0.864,
+      "AP": 0.587,
+      "ROC-AUC": 0.706,
+      "top-50 impr. lost": 20107,
+      "April P@50": 0.98,
+      "April AP": 0.561,
+      "April top-50 impr. lost": 152500
+    },
+    "logistic_regression (chosen model)": {
+      "P@10": 1.0,
+      "P@50": 0.96,
+      "P@500": 0.884,
+      "AP": 0.591,
+      "ROC-AUC": 0.711,
+      "top-50 impr. lost": 16416,
+      "April P@50": 0.94,
+      "April AP": 0.526,
+      "April top-50 impr. lost": 114239
+    },
+    "logistic_regression x impressions (value-aware lead)": {
+      "P@10": 0.6,
+      "P@50": 0.66,
+      "P@500": 0.612,
+      "AP": 0.457,
+      "ROC-AUC": 0.608,
+      "top-50 impr. lost": 810794,
+      "April P@50": 0.62,
+      "April AP": 0.399,
+      "April top-50 impr. lost": 833645
+    }
+  },
+  "versions": {
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "duckdb": "1.5.6"
+  }
+}
