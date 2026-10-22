@@ -1,0 +1,114 @@
+{
+  "notebook": "work/notebooks/w03_data_contract.ipynb",
+  "release": "FlyRank/internship-warehouse v20260703",
+  "dev_month": "2026-03",
+  "decision_moment_T": "2026-03-16",
+  "feature_window": [
+    "2026-03-02",
+    "2026-03-15"
+  ],
+  "outcome_window": [
+    "2026-03-16",
+    "2026-03-29"
+  ],
+  "check_1_grain": {
+    "rows_total": 9841378,
+    "distinct_keys": 9841378,
+    "keys_seen_twice": 0
+  },
+  "check_2_span": [
+    {
+      "slice": "whole month=2026-03 partition",
+      "rows": "9841378",
+      "first_day": "2026-03-01",
+      "last_day": "2026-03-31",
+      "days": "31",
+      "clients": "55",
+      "content_items": "331437"
+    },
+    {
+      "slice": "my slice: feature + outcome windows",
+      "rows": "8902838",
+      "first_day": "2026-03-02",
+      "last_day": "2026-03-29",
+      "days": "28",
+      "clients": "55",
+      "content_items": "326193"
+    }
+  ],
+  "check_3_availability": {
+    "rows_total": 9841378.0,
+    "gsc_is_true": 3611061.0,
+    "gsc_is_false": 6230317.0,
+    "gsc_is_null": 0.0,
+    "ga4_is_true": 413966.0,
+    "ga4_is_false": 6408671.0,
+    "ga4_is_null": 3018741.0,
+    "impressions_on_rows_not_true": 0.0,
+    "gsc_survive_share": 0.367
+  },
+  "frame": {
+    "pages": 74542,
+    "clients": 36,
+    "base_rate": 0.337,
+    "features": [
+      "log_imp_pre",
+      "pos_pre",
+      "active_days_pre",
+      "momentum_pre",
+      "age_days_at_T"
+    ]
+  },
+  "score_honest": {
+    "n_features": 5,
+    "roc_auc": 0.711,
+    "precision@50": 0.96,
+    "test_base_rate": 0.361,
+    "test_pages": 36786,
+    "test_clients": 11
+  },
+  "score_with_leak": {
+    "n_features": 6,
+    "roc_auc": 1.0,
+    "precision@50": 1.0,
+    "test_base_rate": 0.361,
+    "test_pages": 36786,
+    "test_clients": 11
+  },
+  "score_kept": {
+    "n_features": 5,
+    "roc_auc": 0.711,
+    "precision@50": 0.96,
+    "test_base_rate": 0.361,
+    "test_pages": 36786,
+    "test_clients": 11
+  },
+  "split_swing": [
+    {
+      "seed": 0,
+      "roc_auc": 0.772,
+      "precision@50": 1.0
+    },
+    {
+      "seed": 1,
+      "roc_auc": 0.548,
+      "precision@50": 0.94
+    },
+    {
+      "seed": 2,
+      "roc_auc": 0.574,
+      "precision@50": 0.9
+    },
+    {
+      "seed": 3,
+      "roc_auc": 0.667,
+      "precision@50": 0.96
+    },
+    {
+      "seed": 42,
+      "roc_auc": 0.711,
+      "precision@50": 0.96
+    }
+  ],
+  "seed": 42
+}
