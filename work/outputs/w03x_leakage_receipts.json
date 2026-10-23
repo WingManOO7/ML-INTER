@@ -1,0 +1,37 @@
+{
+  "notebook": "work/notebooks/w03_feature_leakage_check.ipynb",
+  "features": [
+    "log_imp_pre",
+    "pos_pre",
+    "active_days_pre",
+    "momentum_pre",
+    "age_days_at_T",
+    "momentum_4w",
+    "peak_day_share_pre",
+    "site_momentum"
+  ],
+  "raw_recompute_check": {
+    "momentum_pre": true,
+    "log_imp_pre": true,
+    "active_days_pre": true
+  },
+  "leakage_hunt": {
+    "honest (5 contract features)": {
+      "AUC": 0.653,
+      "P@50": 0.81
+    },
+    "A. + log(outcome impressions), renamed": {
+      "AUC": 0.994,
+      "P@50": 0.997
+    },
+    "B. + days since update (July snapshot)": {
+      "AUC": 0.658,
+      "P@50": 0.817
+    },
+    "C. shuffled labels": {
+      "AUC": 0.501,
+      "P@50": 0.34
+    }
+  },
+  "columns_accounted": 57
+}

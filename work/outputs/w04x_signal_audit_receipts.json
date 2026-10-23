@@ -1,0 +1,155 @@
+{
+  "notebook": "work/notebooks/w04_signal_audit.ipynb",
+  "signals": {
+    "#1 slide (momentum_pre)": {
+      "table": [
+        {
+          "momentum_pre": "<0.5x",
+          "pages": "48948",
+          "decline_rate": "0.719"
+        },
+        {
+          "momentum_pre": "0.5-0.8x",
+          "pages": "127993",
+          "decline_rate": "0.4716"
+        },
+        {
+          "momentum_pre": "~1x",
+          "pages": "304556",
+          "decline_rate": "0.2968"
+        },
+        {
+          "momentum_pre": "1.25-2x",
+          "pages": "128767",
+          "decline_rate": "0.2037"
+        },
+        {
+          "momentum_pre": ">2x",
+          "pages": "43922",
+          "decline_rate": "0.2322"
+        }
+      ],
+      "inside_client_agree": 0.9787,
+      "cells": 141
+    },
+    "#2 position (pos_pre)": {
+      "table": [
+        {
+          "pos_pre": "top 3",
+          "pages": "75099",
+          "decline_rate": "0.3419"
+        },
+        {
+          "pos_pre": "3-10",
+          "pages": "329053",
+          "decline_rate": "0.3213"
+        },
+        {
+          "pos_pre": "10-20",
+          "pages": "128142",
+          "decline_rate": "0.3263"
+        },
+        {
+          "pos_pre": "20-50",
+          "pages": "107543",
+          "decline_rate": "0.3898"
+        },
+        {
+          "pos_pre": "50+",
+          "pages": "14349",
+          "decline_rate": "0.5046"
+        }
+      ],
+      "inside_client_agree": 0.5342,
+      "cells": 73
+    },
+    "#3 volume (imp_pre)": {
+      "table": [
+        {
+          "imp_pre": "100-300",
+          "pages": "224545",
+          "decline_rate": "0.3656"
+        },
+        {
+          "imp_pre": "300-1k",
+          "pages": "218642",
+          "decline_rate": "0.3335"
+        },
+        {
+          "imp_pre": "1k-3k",
+          "pages": "134018",
+          "decline_rate": "0.3174"
+        },
+        {
+          "imp_pre": "3k-10k",
+          "pages": "62870",
+          "decline_rate": "0.3131"
+        },
+        {
+          "imp_pre": "10k+",
+          "pages": "14111",
+          "decline_rate": "0.3646"
+        }
+      ],
+      "inside_client_agree": 0.443,
+      "cells": 79
+    }
+  },
+  "flag_linked_age": {
+    "pooled": [
+      {
+        "age_days_at_T": "0-89 d",
+        "pages": "169464",
+        "decline_rate": "0.3669"
+      },
+      {
+        "age_days_at_T": "90-179 d",
+        "pages": "153583",
+        "decline_rate": "0.3253"
+      },
+      {
+        "age_days_at_T": "180-269 d",
+        "pages": "161458",
+        "decline_rate": "0.3518"
+      },
+      {
+        "age_days_at_T": "270-364 d",
+        "pages": "101597",
+        "decline_rate": "0.3108"
+      },
+      {
+        "age_days_at_T": "365+ d",
+        "pages": "68084",
+        "decline_rate": "0.3211"
+      }
+    ],
+    "big_pages": [
+      {
+        "age_days_at_T": "0-89 d",
+        "pages": "50937",
+        "decline_rate": "0.3295"
+      },
+      {
+        "age_days_at_T": "90-179 d",
+        "pages": "52564",
+        "decline_rate": "0.3073"
+      },
+      {
+        "age_days_at_T": "180-269 d",
+        "pages": "58535",
+        "decline_rate": "0.3487"
+      },
+      {
+        "age_days_at_T": "270-364 d",
+        "pages": "30060",
+        "decline_rate": "0.2773"
+      },
+      {
+        "age_days_at_T": "365+ d",
+        "pages": "18903",
+        "decline_rate": "0.3007"
+      }
+    ],
+    "inside_client_agree": 0.2381
+  }
+}
