@@ -1,0 +1,152 @@
+{
+  "notebook": "work/notebooks/w06_validation_audit.ipynb",
+  "dev_dates": [
+    "2026-01-05",
+    "2026-01-19",
+    "2026-02-02",
+    "2026-02-16",
+    "2026-03-02",
+    "2026-03-16",
+    "2026-03-30",
+    "2026-04-13",
+    "2026-04-27",
+    "2026-05-11"
+  ],
+  "finding1_pooled_by_age": [
+    {
+      "age_days_at_T": "0-89 d",
+      "pages": "169464",
+      "decline_rate": "0.3669"
+    },
+    {
+      "age_days_at_T": "90-179 d",
+      "pages": "153583",
+      "decline_rate": "0.3253"
+    },
+    {
+      "age_days_at_T": "180-269 d",
+      "pages": "161458",
+      "decline_rate": "0.3518"
+    },
+    {
+      "age_days_at_T": "270-364 d",
+      "pages": "101597",
+      "decline_rate": "0.3108"
+    },
+    {
+      "age_days_at_T": "365+ d",
+      "pages": "68084",
+      "decline_rate": "0.3211"
+    }
+  ],
+  "finding1_within_client": {
+    "cells": 171,
+    "declined_older": 81,
+    "declined_younger": 90,
+    "median_gap_days": -1.0535039886405002
+  },
+  "finding4_update_after_T_share": 0.8022859595932494,
+  "finding4_per_client_top_update_day_share_median": 0.7590011614401858,
+  "finding4_selection": [
+    {
+      "optimised_after_T": "False",
+      "pages": "41465",
+      "median_impressions_before_T": "336.0",
+      "median_position": "7.6396",
+      "decline_rate_next_2w": "0.3948"
+    },
+    {
+      "optimised_after_T": "True",
+      "pages": "33077",
+      "median_impressions_before_T": "1137.0",
+      "median_position": "7.163",
+      "decline_rate_next_2w": "0.2548"
+    }
+  ],
+  "boundary": {
+    "Week-5 model: LR, 5 features | random rows": {
+      "P@50 mean": 0.895,
+      "P@50 std": 0.061,
+      "AP mean": 0.52,
+      "AP std": 0.117,
+      "AUC mean": 0.657,
+      "AUC std": 0.04,
+      "base_rate mean": 0.344,
+      "base_rate std": 0.118
+    },
+    "Week-5 model: LR, 5 features | client-grouped": {
+      "P@50 mean": 0.882,
+      "P@50 std": 0.094,
+      "AP mean": 0.51,
+      "AP std": 0.153,
+      "AUC mean": 0.649,
+      "AUC std": 0.053,
+      "base_rate mean": 0.341,
+      "base_rate std": 0.159
+    },
+    "Week-5 model: LR, 5 features | rolling-origin + client-grouped": {
+      "P@50 mean": 0.852,
+      "P@50 std": 0.143,
+      "AP mean": 0.554,
+      "AP std": 0.164,
+      "AUC mean": 0.658,
+      "AUC std": 0.066,
+      "base_rate mean": 0.381,
+      "base_rate std": 0.153
+    },
+    "HGB + client code + date code | random rows": {
+      "P@50 mean": 0.96,
+      "P@50 std": 0.049,
+      "AP mean": 0.632,
+      "AP std": 0.116,
+      "AUC mean": 0.764,
+      "AUC std": 0.027,
+      "base_rate mean": 0.346,
+      "base_rate std": 0.117
+    },
+    "HGB + client code + date code | client-grouped": {
+      "P@50 mean": 0.822,
+      "P@50 std": 0.134,
+      "AP mean": 0.509,
+      "AP std": 0.172,
+      "AUC mean": 0.661,
+      "AUC std": 0.064,
+      "base_rate mean": 0.342,
+      "base_rate std": 0.16
+    },
+    "HGB + client code + date code | rolling-origin + client-grouped": {
+      "P@50 mean": 0.752,
+      "P@50 std": 0.148,
+      "AP mean": 0.501,
+      "AP std": 0.16,
+      "AUC mean": 0.605,
+      "AUC std": 0.069,
+      "base_rate mean": 0.383,
+      "base_rate std": 0.154
+    }
+  },
+  "leakage": {
+    "planted_leak_auc": [
+      0.6137,
+      0.9941
+    ],
+    "shuffled_auc": 0.499,
+    "single_feature_auc": {
+      "log_imp_pre": 0.4741,
+      "pos_pre": 0.5298,
+      "active_days_pre": 0.4964,
+      "momentum_pre": 0.3307,
+      "age_days_at_T": 0.4819
+    },
+    "snapshot_after_T_range": {
+      "updated_after_T": [
+        0.7561,
+        0.9987
+      ],
+      "optimised_after_T": [
+        0.4292,
+        0.5318
+      ]
+    }
+  }
+}

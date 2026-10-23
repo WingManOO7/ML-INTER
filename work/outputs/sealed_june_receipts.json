@@ -1,0 +1,84 @@
+{
+  "first_computed": "2026-10-23 05:19",
+  "result": {
+    "fingerprint": "d9e8d9bfbd813d89",
+    "sealed_dates": [
+      "2026-05-25",
+      "2026-06-08"
+    ],
+    "pages": 163200,
+    "clients": 47,
+    "new_clients": 4,
+    "base_rate_by_date": {
+      "2026-05-25": 0.4846,
+      "2026-06-08": 0.594
+    },
+    "fold_queues": 10,
+    "table": {
+      "random order": {
+        "P@50": 0.514,
+        "lift@50": 1.0085,
+        "visibility@50": 0.0253,
+        "AUC": 0.4987
+      },
+      "ML-07 rule (baseline)": {
+        "P@50": 0.81,
+        "lift@50": 1.6706,
+        "visibility@50": 0.5602,
+        "AUC": 0.6237
+      },
+      "slide sort (no training)": {
+        "P@50": 0.906,
+        "lift@50": 1.8708,
+        "visibility@50": 0.0402,
+        "AUC": 0.6733
+      },
+      "LR probability alone": {
+        "P@50": 0.902,
+        "lift@50": 1.8556,
+        "visibility@50": 0.0258,
+        "AUC": 0.6801
+      },
+      "LR x lost impressions (policy)": {
+        "P@50": 0.854,
+        "lift@50": 1.7583,
+        "visibility@50": 0.5436,
+        "AUC": 0.656
+      }
+    },
+    "policy_P_ge_rule": 9,
+    "policy_vis_ge_rule": 2,
+    "by_date_P@50": {
+      "2026-05-25": {
+        "random order": 0.48,
+        "ML-07 rule (baseline)": 0.72,
+        "slide sort (no training)": 0.892,
+        "LR probability alone": 0.896,
+        "LR x lost impressions (policy)": 0.784
+      },
+      "2026-06-08": {
+        "random order": 0.548,
+        "ML-07 rule (baseline)": 0.9,
+        "slide sort (no training)": 0.92,
+        "LR probability alone": 0.908,
+        "LR x lost impressions (policy)": 0.924
+      }
+    },
+    "portfolio_queue_P@50": {
+      "2026-05-25": {
+        "random order": 0.5,
+        "ML-07 rule (baseline)": 0.8,
+        "slide sort (no training)": 0.94,
+        "LR probability alone": 0.96,
+        "LR x lost impressions (policy)": 0.82
+      },
+      "2026-06-08": {
+        "random order": 0.68,
+        "ML-07 rule (baseline)": 0.88,
+        "slide sort (no training)": 0.98,
+        "LR probability alone": 1.0,
+        "LR x lost impressions (policy)": 0.92
+      }
+    }
+  }
+}

@@ -1,0 +1,360 @@
+{
+  "notebook": "work/notebooks/w07_action_playbook.ipynb",
+  "score_date": "2026-05-11",
+  "policy": "P(declined_robust | 5 contract features, logistic regression) x lost weekly impressions",
+  "pages_scored": 79578,
+  "queue_rows": 40316,
+  "route_counts_all": {
+    "SLIDING_WITH_DEMAND": 34878,
+    "SITE_WIDE_SLIDE": 2762,
+    "NEW_PAGE_SETTLING": 2302,
+    "SPIKE_FADE": 223,
+    "COLLAPSE_TO_NEAR_ZERO": 151
+  },
+  "route_counts_top50": {
+    "SLIDING_WITH_DEMAND": 38,
+    "SITE_WIDE_SLIDE": 6,
+    "COLLAPSE_TO_NEAR_ZERO": 4,
+    "NEW_PAGE_SETTLING": 2
+  },
+  "confidence_calibration": [
+    {
+      "p_lr5": "low (P < 0.4)",
+      "picks": "417",
+      "observed_precision": "0.458"
+    },
+    {
+      "p_lr5": "medium (0.4-0.6)",
+      "picks": "626",
+      "observed_precision": "0.6358"
+    },
+    {
+      "p_lr5": "high (P >= 0.6)",
+      "picks": "957",
+      "observed_precision": "0.8339"
+    }
+  ],
+  "coverage": {
+    "pages tracked in the 14 days before T": 372388,
+    "pages eligible for scoring": 79578,
+    "share of tracked pages that are eligible": 0.2137,
+    "share of all impressions held by eligible pages": 0.9737,
+    "pages in the queue (dropped before T)": 40316
+  },
+  "trigger_replay": [
+    {
+      "decision_date": "2026-02-02",
+      "T1 max PSI": "0.07209711939432234",
+      "T1 feature": "momentum_pre",
+      "T2 site share top50": "0.184",
+      "T3 base-rate move": "0.0798222591524704",
+      "T4 model < rule (2 in a row)": "False",
+      "fires": "\u2014"
+    },
+    {
+      "decision_date": "2026-02-16",
+      "T1 max PSI": "0.07287953147242007",
+      "T1 feature": "momentum_pre",
+      "T2 site share top50": "0.024",
+      "T3 base-rate move": "-0.03744462017417774",
+      "T4 model < rule (2 in a row)": "False",
+      "fires": "\u2014"
+    },
+    {
+      "decision_date": "2026-03-02",
+      "T1 max PSI": "0.010010022749908743",
+      "T1 feature": "log_imp_pre",
+      "T2 site share top50": "0.0",
+      "T3 base-rate move": "0.12870220421264975",
+      "T4 model < rule (2 in a row)": "False",
+      "fires": "T3"
+    },
+    {
+      "decision_date": "2026-03-16",
+      "T1 max PSI": "0.08913256820337957",
+      "T1 feature": "momentum_pre",
+      "T2 site share top50": "0.208",
+      "T3 base-rate move": "0.026061448597741788",
+      "T4 model < rule (2 in a row)": "False",
+      "fires": "\u2014"
+    },
+    {
+      "decision_date": "2026-03-30",
+      "T1 max PSI": "0.08403897000145111",
+      "T1 feature": "momentum_pre",
+      "T2 site share top50": "0.064",
+      "T3 base-rate move": "0.0611282995731135",
+      "T4 model < rule (2 in a row)": "False",
+      "fires": "\u2014"
+    },
+    {
+      "decision_date": "2026-04-13",
+      "T1 max PSI": "0.05279500407028155",
+      "T1 feature": "momentum_pre",
+      "T2 site share top50": "0.136",
+      "T3 base-rate move": "0.030805105901894336",
+      "T4 model < rule (2 in a row)": "False",
+      "fires": "\u2014"
+    },
+    {
+      "decision_date": "2026-04-27",
+      "T1 max PSI": "0.48231614582220794",
+      "T1 feature": "momentum_pre",
+      "T2 site share top50": "0.604",
+      "T3 base-rate move": "0.1473001653248781",
+      "T4 model < rule (2 in a row)": "False",
+      "fires": "T1, T2, T3"
+    },
+    {
+      "decision_date": "2026-05-11",
+      "T1 max PSI": "0.6366921107625084",
+      "T1 feature": "momentum_pre",
+      "T2 site share top50": "0.168",
+      "T3 base-rate move": "-0.2289702591497585",
+      "T4 model < rule (2 in a row)": "False",
+      "fires": "T1, T3"
+    }
+  ],
+  "top20_no_ids": [
+    {
+      "rank": "1",
+      "action": "REFRESH_REVIEW",
+      "reason_code": "SLIDING_WITH_DEMAND",
+      "confidence": "medium",
+      "p_decline": "0.581",
+      "lost_weekly_impressions": "36153.0",
+      "expected_loss": "21003.8223",
+      "imp_pre": "68829.0",
+      "pos_pre": "6.6138",
+      "age_days_at_T": "508"
+    },
+    {
+      "rank": "2",
+      "action": "REFRESH_REVIEW",
+      "reason_code": "SLIDING_WITH_DEMAND",
+      "confidence": "high",
+      "p_decline": "0.7987",
+      "lost_weekly_impressions": "22464.0",
+      "expected_loss": "17942.0038",
+      "imp_pre": "29866.0",
+      "pos_pre": "7.4514",
+      "age_days_at_T": "392"
+    },
+    {
+      "rank": "3",
+      "action": "REFRESH_REVIEW",
+      "reason_code": "SLIDING_WITH_DEMAND",
+      "confidence": "high",
+      "p_decline": "0.9336",
+      "lost_weekly_impressions": "13543.0",
+      "expected_loss": "12643.6137",
+      "imp_pre": "15131.0",
+      "pos_pre": "7.1214",
+      "age_days_at_T": "194"
+    },
+    {
+      "rank": "4",
+      "action": "TECHNICAL_CHECK",
+      "reason_code": "COLLAPSE_TO_NEAR_ZERO",
+      "confidence": "high",
+      "p_decline": "0.9483",
+      "lost_weekly_impressions": "11457.0",
+      "expected_loss": "10864.5931",
+      "imp_pre": "12569.0",
+      "pos_pre": "10.517",
+      "age_days_at_T": "200"
+    },
+    {
+      "rank": "5",
+      "action": "REFRESH_REVIEW",
+      "reason_code": "SLIDING_WITH_DEMAND",
+      "confidence": "high",
+      "p_decline": "0.6971",
+      "lost_weekly_impressions": "14334.0",
+      "expected_loss": "9992.257",
+      "imp_pre": "22700.0",
+      "pos_pre": "8.7866",
+      "age_days_at_T": "392"
+    },
+    {
+      "rank": "6",
+      "action": "REFRESH_REVIEW",
+      "reason_code": "SLIDING_WITH_DEMAND",
+      "confidence": "high",
+      "p_decline": "0.7395",
+      "lost_weekly_impressions": "12654.0",
+      "expected_loss": "9357.4158",
+      "imp_pre": "20056.0",
+      "pos_pre": "8.8867",
+      "age_days_at_T": "68"
+    },
+    {
+      "rank": "7",
+      "action": "TECHNICAL_CHECK",
+      "reason_code": "COLLAPSE_TO_NEAR_ZERO",
+      "confidence": "high",
+      "p_decline": "0.9712",
+      "lost_weekly_impressions": "9295.0",
+      "expected_loss": "9027.6932",
+      "imp_pre": "9707.0",
+      "pos_pre": "3.288",
+      "age_days_at_T": "508"
+    },
+    {
+      "rank": "8",
+      "action": "REFRESH_REVIEW",
+      "reason_code": "SLIDING_WITH_DEMAND",
+      "confidence": "medium",
+      "p_decline": "0.4951",
+      "lost_weekly_impressions": "18076.0",
+      "expected_loss": "8949.0139",
+      "imp_pre": "56502.0",
+      "pos_pre": "4.626",
+      "age_days_at_T": "55"
+    },
+    {
+      "rank": "9",
+      "action": "REFRESH_REVIEW",
+      "reason_code": "SLIDING_WITH_DEMAND",
+      "confidence": "high",
+      "p_decline": "0.812",
+      "lost_weekly_impressions": "10350.0",
+      "expected_loss": "8403.8484",
+      "imp_pre": "13918.0",
+      "pos_pre": "3.9532",
+      "age_days_at_T": "118"
+    },
+    {
+      "rank": "10",
+      "action": "REFRESH_REVIEW",
+      "reason_code": "SLIDING_WITH_DEMAND",
+      "confidence": "high",
+      "p_decline": "0.6161",
+      "lost_weekly_impressions": "12285.0",
+      "expected_loss": "7569.2963",
+      "imp_pre": "26119.0",
+      "pos_pre": "9.0004",
+      "age_days_at_T": "77"
+    },
+    {
+      "rank": "11",
+      "action": "MONITOR",
+      "reason_code": "NEW_PAGE_SETTLING",
+      "confidence": "high",
+      "p_decline": "0.7108",
+      "lost_weekly_impressions": "9960.0",
+      "expected_loss": "7079.2322",
+      "imp_pre": "16888.0",
+      "pos_pre": "8.0541",
+      "age_days_at_T": "28"
+    },
+    {
+      "rank": "12",
+      "action": "REFRESH_REVIEW",
+      "reason_code": "SLIDING_WITH_DEMAND",
+      "confidence": "medium",
+      "p_decline": "0.4177",
+      "lost_weekly_impressions": "16226.0",
+      "expected_loss": "6778.1819",
+      "imp_pre": "79348.0",
+      "pos_pre": "3.2272",
+      "age_days_at_T": "35"
+    },
+    {
+      "rank": "13",
+      "action": "REFRESH_REVIEW",
+      "reason_code": "SLIDING_WITH_DEMAND",
+      "confidence": "low",
+      "p_decline": "0.3815",
+      "lost_weekly_impressions": "16838.0",
+      "expected_loss": "6424.4828",
+      "imp_pre": "69116.0",
+      "pos_pre": "2.8142",
+      "age_days_at_T": "416"
+    },
+    {
+      "rank": "14",
+      "action": "TECHNICAL_CHECK",
+      "reason_code": "COLLAPSE_TO_NEAR_ZERO",
+      "confidence": "high",
+      "p_decline": "0.949",
+      "lost_weekly_impressions": "6355.0",
+      "expected_loss": "6031.205",
+      "imp_pre": "6995.0",
+      "pos_pre": "9.981",
+      "age_days_at_T": "104"
+    },
+    {
+      "rank": "15",
+      "action": "REFRESH_REVIEW",
+      "reason_code": "SLIDING_WITH_DEMAND",
+      "confidence": "high",
+      "p_decline": "0.7709",
+      "lost_weekly_impressions": "7402.0",
+      "expected_loss": "5706.4066",
+      "imp_pre": "10046.0",
+      "pos_pre": "1.3727",
+      "age_days_at_T": "392"
+    },
+    {
+      "rank": "16",
+      "action": "SITE_LEVEL_CHECK",
+      "reason_code": "SITE_WIDE_SLIDE",
+      "confidence": "medium",
+      "p_decline": "0.4394",
+      "lost_weekly_impressions": "11643.0",
+      "expected_loss": "5116.2787",
+      "imp_pre": "46443.0",
+      "pos_pre": "7.7838",
+      "age_days_at_T": "195"
+    },
+    {
+      "rank": "17",
+      "action": "MONITOR",
+      "reason_code": "NEW_PAGE_SETTLING",
+      "confidence": "high",
+      "p_decline": "0.9401",
+      "lost_weekly_impressions": "5301.0",
+      "expected_loss": "4983.5866",
+      "imp_pre": "5929.0",
+      "pos_pre": "7.6607",
+      "age_days_at_T": "28"
+    },
+    {
+      "rank": "18",
+      "action": "REFRESH_REVIEW",
+      "reason_code": "SLIDING_WITH_DEMAND",
+      "confidence": "medium",
+      "p_decline": "0.5967",
+      "lost_weekly_impressions": "8061.0",
+      "expected_loss": "4810.3568",
+      "imp_pre": "18637.0",
+      "pos_pre": "9.7919",
+      "age_days_at_T": "48"
+    },
+    {
+      "rank": "19",
+      "action": "SITE_LEVEL_CHECK",
+      "reason_code": "SITE_WIDE_SLIDE",
+      "confidence": "high",
+      "p_decline": "0.7565",
+      "lost_weekly_impressions": "6273.0",
+      "expected_loss": "4745.7312",
+      "imp_pre": "9371.0",
+      "pos_pre": "3.3739",
+      "age_days_at_T": "61"
+    },
+    {
+      "rank": "20",
+      "action": "REFRESH_REVIEW",
+      "reason_code": "SLIDING_WITH_DEMAND",
+      "confidence": "medium",
+      "p_decline": "0.4736",
+      "lost_weekly_impressions": "9984.0",
+      "expected_loss": "4728.0714",
+      "imp_pre": "35360.0",
+      "pos_pre": "5.8544",
+      "age_days_at_T": "69"
+    }
+  ]
+}
